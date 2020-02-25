@@ -60,8 +60,8 @@ public class Complete : MonoBehaviour
                 //MoveObject(Input.GetTouch(0));
                 
             }
-            deleteButton.GetComponent<Button>().onClick.AddListener(() => Destroy(placedObject));
-            deleteButton.GetComponent<Button>().onClick.AddListener(() => placedObjectList.Remove(placedObject));
+            //deleteButton.GetComponent<Button>().onClick.AddListener(() => Destroy(placedObject));
+            deleteButton.GetComponent<Button>().onClick.AddListener(() => RemoveAll());
 
 
         }
@@ -118,20 +118,29 @@ public class Complete : MonoBehaviour
 
     }
 
-    private void MoveObject(Touch touch)
+    private void RemoveAll()
     {
-        if (!IsPointerOverUIObject(touch))
+        foreach(GameObject pO in placedObjectList)
         {
-            List<ARRaycastHit> hits = new List<ARRaycastHit>();
-            arRaycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon);
-
-            if (hits.Count > 0)
-            {
-                placedObject.transform.position = hits[0].pose.position;
-                placedObject.transform.rotation = hits[0].pose.rotation;
-            }
+            placedObjectList.Remove(pO);
+            GameObject.Destroy(pO);
         }
     }
+
+    //private void MoveObject(Touch touch)
+    //{
+    //    if (!IsPointerOverUIObject(touch))
+    //    {
+    //        List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    //        arRaycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon);
+
+    //        if (hits.Count > 0)
+    //        {
+    //            placedObject.transform.position = hits[0].pose.position;
+    //            placedObject.transform.rotation = hits[0].pose.rotation;
+    //        }
+    //    }
+    //}
 
     private void SwitchObjectToPlace(string buttonName)
     {
