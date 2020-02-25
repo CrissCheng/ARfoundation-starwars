@@ -1,0 +1,19 @@
+This project uses the following items from Poly (http://poly.google.com):
+
+Title: Jug
+Author: Poly by Google
+URL: https://poly.google.com/view/7UhWqp0uQKV
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Jug
+Author: Poly by Google
+URL: https://poly.google.com/view/fmkR92NffA7
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Vase
+Author: Poly by Google
+URL: https://poly.google.com/view/20LOTk3BnjO
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
