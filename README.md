@@ -5,3 +5,5 @@
 
 ## what this app does:
 This is a iOS AR app that can create star wars objects in the scene. 
+
+![](intro.gif)
